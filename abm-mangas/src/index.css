@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Rojo: #ff5019 ;
+  --Celeste: #5196ff;
+  --Amarillo: #ffd90f;
+  --Blanco: #f8efd6;
+}
+
+/* COLORES */
+/* ROJO: #ff5019 */
+/* CELESTE: #5196ff */
+/* AMARILLO: #ffd90f */
+/* BLANCO: #f8efd6 */
+
+
+html{
+  background-color: var(--Celeste);
+  color: var(--Blanco);
+}
+
+li{
+  list-style: none;
+}

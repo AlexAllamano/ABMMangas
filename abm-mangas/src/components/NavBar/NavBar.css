@@ -1,0 +1,9 @@
+.navBar{
+    color: var(--Amarillo);
+    font-size: 1.5rem;
+}
+
+.contenedorNav{
+    max-width: 80%;
+    margin: 0 auto;
+}
