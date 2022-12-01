@@ -25,3 +25,17 @@ html{
 li{
   list-style: none;
 }
+
+.sombraBlanca{
+  -webkit-box-shadow: 0px 7px 12px 1px var(--Blanco);
+  -moz-box-shadow: 0px 7px 12px 1px var(--Blanco);
+  box-shadow: 0px 7px 12px 1px var(--Blanco);
+}
+
+.textoBlanco{
+  color: var(--Blanco);
+}
+
+.textoAmarillo{
+  color: var(--Amarillo);
+}
