@@ -1,7 +1,12 @@
+import React from 'react'
+import { Carrusel } from '../Auxiliares/Carrusel/Carrusel'
+import { ListaUsuarios } from '../ListaUsuarios/ListaUsuarios'
+
 export const VistaPrincipal = () => {
   return (
-    <>
-        <h1>Vista Principal</h1>
-    </>
+    <div>
+        <Carrusel></Carrusel>
+        <ListaUsuarios/>
+    </div>
   )
 }

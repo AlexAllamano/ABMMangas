@@ -4,13 +4,25 @@ import logo from "../../assets/img/Logo.jpg";
 
 export const NavBar = () => {
   return (
-    <div className="navBar contenedorNav row">
-      <img className="col-md-6 col-sm-12" src={logo} alt="" />
+    <div className="navBar sombraBlanca text-center">
+      <div className="contenedorNav row">
+        <div className="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+          <div>
+            <h2 className="textoLogo">Rayos <span>y</span></h2>
+            <h2 className="textoLogo">Centellas</h2>
+          </div>
+          <img className="logo " src={logo} alt="" />
+        </div>
 
-      <ul className="col-md-6 col-sm-12 d-flex justify-content-between">
-        <li className="mr-3 ml-3">Ver Productos</li>
-        <li className="mr-3 ml-3">Ver Usuarios</li>
-      </ul>
+        <ul className="col-md-6 col-sm-12 d-flex justify-content-center listaNavBar">
+          <li className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar">
+            Ver Productos
+          </li>
+          <li className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar">
+            Ver Usuarios
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

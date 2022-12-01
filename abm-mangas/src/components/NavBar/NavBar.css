@@ -1,9 +1,41 @@
-.navBar{
-    color: var(--Amarillo);
-    font-size: 1.5rem;
+.navBar {
+  color: var(--Amarillo);
+  font-size: 1.5rem;
+  padding: .5rem 0;
+  
 }
 
-.contenedorNav{
-    max-width: 80%;
-    margin: 0 auto;
+span{
+    color: var(--Rojo);
+}
+.textoLogo{
+    color: var(--Amarillo);
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.contenedorNav {
+ 
+  margin: 0 auto;
+
+  
+}
+
+.logo {
+  height: 6rem;
+  width: 6rem;
+}
+
+.listaNavBar {
+  margin: 0;
+}
+
+.itemNavBar{
+    transition: all .5s ease;
+}
+
+.itemNavBar:hover{
+    color: var(--Rojo);
+    
 }
