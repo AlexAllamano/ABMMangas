@@ -28,11 +28,22 @@ span{
   margin: 0;
 }
 
-.itemNavBar{
-    transition: all .5s ease;
-    cursor: pointer;
+#listaNavBar a:hover{
+  color: var(--Rojo);
 }
 
-.itemNavBar:hover{
-    color: var(--Rojo);
+
+#listaNavBar a{
+  color: var(--Amarillo);
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {  
+
+  #listaNavBar{
+    display: flex;
+    flex-direction: column;
+  }
+
 }

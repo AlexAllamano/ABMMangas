@@ -21,59 +21,47 @@ export const NavBar = () => {
   return (
     <div className="navBar sombraBlanca text-center">
 
-      <div className="d-flex justify-content-center align-items-center">
-        <div>
-          <h2 className="textoLogo">Rayos <span>y</span></h2>
-          <h2 className="textoLogo">Centellas</h2>
+      <div className="row">
+
+        <div className="d-flex justify-content-center align-items-center col-md-3 col-sm-12">
+          <div>
+            <h2 className="textoLogo">Tienda <span>de</span></h2>
+            <h2 className="textoLogo">Mangas</h2>
+          </div>
+          <img className="logo " src={logo} alt="" />
         </div>
-        <img className="logo " src={logo} alt="" />
+
+
+        <ul id="listaNavBar" className="d-flex justify-content-center listaNavBar col-md-9 col-sm-12">
+
+
+
+            <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
+              href="/Productos">
+              Ver Productos
+            </a>
+
+
+            <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
+              href="/Search">
+              Ver Usuarios
+            </a>
+
+            <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
+              href="/Search">
+              Search
+            </a>
+
+            <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
+              onClick={onLogout}>
+              Logout
+            </a>
+
+
+        </ul>
+
       </div>
 
-      <ul className="d-flex justify-content-center listaNavBar">
-        <li className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar">
-        <a  className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar" 
-              href="/Productos">
-                Ver Productos
-          </a>
-        </li>
-        <li className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar">
-        <a  className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar" 
-              href="/Search">
-                Ver Usuarios
-          </a>
-        </li>
-
-
-        <li className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar">
-          <a  className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar" 
-              href="/Search">
-                Search
-          </a>
-        </li>
-
-        <li className="mr-5 ml-5 d-flex justify-content-center flex-column itemNavBar"
-            onClick={onLogout}>
-          Logout
-        </li>
-        
-
-        {/* <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-          <ul className="navbar-nav ml-auto">
-
-            <span className="nav-item nav-link text-primary">
-              {user?.name}
-            </span>
-
-            <button
-              className="nav-item nav-link btn itemNavBar"
-              onClick={onLogout}
-            >
-              Logout
-            </button>
-
-          </ul>
-        </div> */}
-      </ul>
     </div>
 
   );
