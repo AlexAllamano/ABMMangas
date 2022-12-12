@@ -17,9 +17,14 @@
 /* BLANCO: #f8efd6 */
 
 
-html{
+.back-celeste, html{
   background-color: var(--Celeste);
   color: var(--Blanco);
+}
+
+.back-amarillo{
+  background-color: rgb(255, 255, 180);
+  color: black;
 }
 
 li{
@@ -38,4 +43,8 @@ li{
 
 .textoAmarillo{
   color: var(--Amarillo);
+}
+
+.colorBorde{
+  border: red 2px solid;
 }

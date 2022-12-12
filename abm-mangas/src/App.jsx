@@ -9,11 +9,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='back-celeste'>
     <NavBar></NavBar>
       <AppRouter />
-      <VistaPrincipal></VistaPrincipal>
-    </>
+      
+    </div>
   )
 }
 

@@ -3,24 +3,7 @@ import { Observable, Subscriber } from "rxjs";
 import * as XLSX from "xlsx";
 
 
-export const LectorExcel = () => {
-
-    // const capturarArchivo = (e) =>{
-
-    //     const archivo = e.target.files[0];
-    //     console.log('archivooo',archivo);
-
-    //     console.log(XLSX.readFile(archivo));
-
-    //     document.getElementById('inputFile').value = null;
-
-    // }
-
-
-    
-
- 
-
+export const LectorExcel = ({pasarArreglo}) => {
 
   const capturarArchivo = (e) => {
 
@@ -35,9 +18,8 @@ export const LectorExcel = () => {
     excelObservavble.subscribe((data) => {      
      limpiarInputFile();
 
-     console.log(data); 
-     
-     return (data);
+     pasarArreglo(data);
+     console.log(data);
     });
   }    
 
@@ -62,5 +44,10 @@ export const LectorExcel = () => {
   }
 
 
- 
+  return (
+    <div>
+        <label htmlFor="inputFile" className='btn btn-success'>Leer excel</label>
+        <input type="file" id='inputFile' className='d-none' onChange={(e) => capturarArchivo(e)}/>
+    </div>
+  )
 }
