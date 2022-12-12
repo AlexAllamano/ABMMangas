@@ -2,24 +2,21 @@
   color: var(--Amarillo);
   font-size: 1.5rem;
   padding: .5rem 0;
-  
+  margin: 0 auto;
+  background-color: var(--Celeste);
+  display: flex;
+  justify-content: space-around;
 }
 
 span{
     color: var(--Rojo);
 }
+
 .textoLogo{
     color: var(--Amarillo);
     font-size: 3rem;
     font-weight: bold;
     line-height: 2rem;
-}
-
-.contenedorNav {
- 
-  margin: 0 auto;
-
-  
 }
 
 .logo {
@@ -33,9 +30,9 @@ span{
 
 .itemNavBar{
     transition: all .5s ease;
+    cursor: pointer;
 }
 
 .itemNavBar:hover{
     color: var(--Rojo);
-    
 }
