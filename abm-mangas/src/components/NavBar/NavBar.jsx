@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.css";
-import logo from "../../assets/img/Logo.jpg";
+import logo from "../../assets/img/Logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
