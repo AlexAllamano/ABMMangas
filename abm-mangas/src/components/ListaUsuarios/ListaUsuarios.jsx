@@ -3,34 +3,26 @@ import { LectorExcel } from "../Auxiliares/LectorExcel/LectorExcel";
 import { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { AltaUsuarios } from "./AltaUsuarios/AltaUsuarios";
-import { baseUrl, API_Endpoints } from "../../services/ApiService";
-import { useFetch } from "../../hooks/useFetch"; 
+import {getUsuarios, postUsuarios} from '../../services/ApiService'
 
 
 export const ListaUsuarios = () => {
 
   const [rows, setRows] = useState([]);
-console.log(1);
-  const {data, error, loading} = useFetch(`${baseUrl}${API_Endpoints.USUARIOS}`, 'GET', null);
-  console.log(3);
 
-
-  useEffect(() => {   
-    console.log('lisa de usuarios',data);
-        setRows(data||[]);
+  useEffect(() => {
+    getUsuarios().then(arr => {
+      setRows(arr.data);
+    })   
   },[]);
 
   const cargarUsuario = (data) =>{
-  
+    postUsuarios(data);
   }
-
-  
 
   const obtenerArreglo = (datosExcel) => {
     setRows(datosExcel);
   };
-
-
 
   const columns = [
     { field: "id", headerName: "ID", flex: 1 },
