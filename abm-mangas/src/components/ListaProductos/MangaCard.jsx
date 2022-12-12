@@ -11,8 +11,10 @@ export const MangaCard = ({
 
     const mangaImageUrl = `/mangasImg/${id}.jpg`;
 
+    console.log("id",id)
+
     return (
-            <div className="card m-1 w-33">
+            <div className="card m-1 w-33 animate__animated animate__fadeIn">
 
                 <div className="row no-gutters">
 
@@ -32,7 +34,7 @@ export const MangaCard = ({
 
                             <h5 className="card-text">{precio}</h5>
                             
-                            <Link to={id}>
+                            <Link to={`/manga/${id}`}>
                                 Mas Detalles...
                             </Link>
                         </div>
