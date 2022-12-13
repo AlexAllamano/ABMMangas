@@ -2,24 +2,43 @@ import React from "react";
 import { useState } from "react";
 
 export const AltaUsuarios = ({cargarUsuario}) => {
+
   const [usuario, setUsuario] = useState({
     nombre: "",
     apellido: "",
-    usuario: "",
+    username: "",
     id: 0,
     password: ""
   });
 
-  const modificarUsuario = (nombre,valor) => {
-    const {value} = valor.target;
+  // const modificarUsuario = (nombre,valor) => {
+  //   const {value} = valor.target;
+  //   setUsuario({
+  //     ...usuario,[nombre]: value      
+  //   });
+  // };
+
+  const modificarUsuario = e => {
     setUsuario({
-      ...usuario,[nombre]: value      
-    });
-  };
+      ...usuario,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  //Extraigo valores
+  const { nombre, apellido, username, password } = usuario;
 
   const enviar = (e) =>{
     e.preventDefault();
-    cargarUsuario(usuario);   
+    cargarUsuario(usuario);
+    
+    setUsuario({
+      nombre: "",
+      apellido: "",
+      username: "",
+      id: 0,
+      password: ""
+    })
   }
 
   return (
@@ -30,10 +49,12 @@ export const AltaUsuarios = ({cargarUsuario}) => {
             <label htmlFor="validationDefault01">Nombre</label>
             <input
               type="text"
+              name="nombre"
               className="form-control"
               id="validationDefault01"
-              placeholder="Nombre"
-              onChange={(e) => modificarUsuario('nombre', e)}
+              placeholder="First name"
+              onChange={modificarUsuario}
+              value={nombre}
               required
             />
           </div>
@@ -41,10 +62,12 @@ export const AltaUsuarios = ({cargarUsuario}) => {
             <label htmlFor="validationDefault02">Apellido</label>
             <input
               type="text"
+              name="apellido"
               className="form-control"
               id="validationDefault02"
-              placeholder="Apellido"
-              onChange={(e) => modificarUsuario('apellido',e)}
+              placeholder="Last name"
+              onChange={modificarUsuario}
+              value={apellido}
               required
             />
           </div>
@@ -53,11 +76,13 @@ export const AltaUsuarios = ({cargarUsuario}) => {
             <div className="input-group">
               <input
                 type="text"
+                name="username"
                 className="form-control"
                 id="validationDefaultUsername"
                 placeholder="Usuario"
                 aria-describedby="inputGroupPrepend2"
-                onChange={(e) => modificarUsuario('usuario',e)}
+                onChange={modificarUsuario}
+                value={username}
                 required
               />
             </div>
@@ -67,11 +92,13 @@ export const AltaUsuarios = ({cargarUsuario}) => {
             <div className="input-group">
               <input
                 type="password"
+                name="password"
                 className="form-control"
                 id="validationDefaultPass"
                 placeholder="Password"
                 aria-describedby="inputGroupPrepend2"
-                onChange={(e) => modificarUsuario('password',e)}
+                onChange={modificarUsuario}
+                value={password}
                 required
               />
             </div>

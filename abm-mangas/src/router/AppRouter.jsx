@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom"
+import { CreateAccount } from "../auth/pages/CreateAccount"
 import { LoginPage } from "../auth/pages/LoginPage"
 import { ItemProducto } from "../components/ListaProductos/ItemProducto/ItemProducto"
 import { ListaProductos } from "../components/ListaProductos/ListaProductos"
@@ -11,6 +12,7 @@ export const AppRouter = () => {
     <>
         <Routes>
             <Route path="login" element={<LoginPage/>}/>
+            <Route path="create-account" element={<CreateAccount/>}/>
             <Route path="/" element={<Navigate to="/vista-principal"/>}/>
             <Route path="vista-principal" element={<VistaPrincipal/>}/>
             <Route path="productos" element={<ListaProductos/>}/>
