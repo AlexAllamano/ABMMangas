@@ -19,8 +19,7 @@ export const AltaUsuarios = ({cargarUsuario}) => {
 
   const enviar = (e) =>{
     e.preventDefault();
-    cargarUsuario(usuario);
-   
+    cargarUsuario(usuario);   
   }
 
   return (
@@ -28,35 +27,35 @@ export const AltaUsuarios = ({cargarUsuario}) => {
       <form onSubmit={enviar}>
         <div className="form-row">
           <div className="col-md-6 mb-3">
-            <label htmlFor="validationDefault01">First name</label>
+            <label htmlFor="validationDefault01">Nombre</label>
             <input
               type="text"
               className="form-control"
               id="validationDefault01"
-              placeholder="First name"
+              placeholder="Nombre"
               onChange={(e) => modificarUsuario('nombre', e)}
               required
             />
           </div>
           <div className="col-md-6 mb-3">
-            <label htmlFor="validationDefault02">Last name</label>
+            <label htmlFor="validationDefault02">Apellido</label>
             <input
               type="text"
               className="form-control"
               id="validationDefault02"
-              placeholder="Last name"
+              placeholder="Apellido"
               onChange={(e) => modificarUsuario('apellido',e)}
               required
             />
           </div>
           <div className="col-md-6 mb-3">
-            <label htmlFor="validationDefaultUsername">Username</label>
+            <label htmlFor="validationDefaultUsername">Usuario</label>
             <div className="input-group">
               <input
                 type="text"
                 className="form-control"
                 id="validationDefaultUsername"
-                placeholder="Username"
+                placeholder="Usuario"
                 aria-describedby="inputGroupPrepend2"
                 onChange={(e) => modificarUsuario('usuario',e)}
                 required

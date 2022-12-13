@@ -19,10 +19,10 @@ export const MangaCard = ({
                 <div className="row no-gutters">
 
                     <div className="col-4">
-                        <img src={mangaImageUrl} className="card-img" alt={nombre} />
+                        <img src={mangaImageUrl} className="cardImg" alt={nombre} />
                     </div>
 
-                    <div className="col-8">
+                    <div className="col-8 back-tarjeta">
 
                         <div className="card-body">
 

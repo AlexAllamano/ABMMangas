@@ -19,8 +19,8 @@ export const ItemProducto = () => {
   }
 
   return (
-    <div className="row mt-5">
-      <div className="col-4">
+    <div className="row mt-5 container">
+      <div className="col-md-4 col-sm-12">
         <img 
           src={`/mangasImg/${id}.jpg`} 
           alt={ manga.nombre } 
@@ -28,18 +28,18 @@ export const ItemProducto = () => {
           />
       </div>
 
-      <div className="col-8">
+      <div className="col-md-8 col-sm-12">
 
-        <h3>{ manga.nombre }</h3>
+        <h1>{ manga.nombre }</h1>
         <h3># { manga.numero }</h3>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item"> <b> Editorial:  </b> { manga.editorial } </li>
-          <li className="list-group-item"> <b> Descripcion:  </b> { manga.descripcion } </li>
-          <li className="list-group-item"> <b> Precio:  </b> { manga.precio } </li>
+          <li className="list-group-item list-group-item-action list-group-item-warning"> <b> Editorial:  </b> { manga.editorial } </li>
+          <li className="list-group-item list-group-item-action list-group-item-warning"> <b> Descripcion:  </b> { manga.descripcion } </li>
+          <li className="list-group-item list-group-item-action list-group-item-warning"> <b> Precio:  </b> { manga.precio } </li>
         </ul>
 
         <button 
-        className="btn btn-outline-primary mt-2"
+        className="btn btn-danger mt-2"
         onClick={ onNavigateBack }
         >
           Back

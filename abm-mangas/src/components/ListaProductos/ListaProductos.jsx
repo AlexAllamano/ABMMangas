@@ -6,7 +6,7 @@ import axios from 'axios';
 export const ListaProductos = () => {
 
   return (
-    <div className="container d-flex flex-wrap">
+    <div className="container d-flex flex-wrap mt-3 mb-3">
       {
         mangas.map(manga => (
           <MangaCard
