@@ -14,6 +14,7 @@ function App() {
     <div className='back-celeste'>
       <AuthProvider>
         
+        
         <NavBar></NavBar>
         <AppRouter />
 

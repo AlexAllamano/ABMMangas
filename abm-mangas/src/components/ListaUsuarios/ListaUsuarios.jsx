@@ -9,15 +9,25 @@ import {getUsuarios, postUsuarios} from '../../services/ApiService'
 export const ListaUsuarios = () => {
 
   const [rows, setRows] = useState([]);
+  const [gatillo, setGatillo] = useState(false);
+
 
   useEffect(() => {
+    
     getUsuarios().then(arr => {
       setRows(arr.data);
+
+      console.log(rows);
     })   
-  },[]);
+
+
+  },[gatillo]);
 
   const cargarUsuario = (data) =>{
     postUsuarios(data);
+
+    setGatillo(!gatillo);
+    console.log(gatillo);
   }
 
   const obtenerArreglo = (datosExcel) => {
@@ -28,7 +38,7 @@ export const ListaUsuarios = () => {
     { field: "id", headerName: "ID", flex: 1 },
     { field: "nombre", headerName: "Nombre", flex: 1 },
     { field: "apellido", headerName: "Apellido", flex: 1 },
-    { field: "usuario", headerName: "Usuaio",flex: 1 },
+    { field: "usuario", headerName: "Usuario",flex: 1 },
   ];
 
   return (

@@ -2,9 +2,9 @@ import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import "./LoginPage.css";
+import "./LoginPage.css";
 
-
-export const LoginPage = () => {
+export const CreateAccount = () => {
 
   const { login } = useContext( AuthContext );
   const navigate = useNavigate();
@@ -21,11 +21,13 @@ export const LoginPage = () => {
   // }
 
   const [usuario, setUsuario] = useState({
+    nombre: '',
     email: '',
-    password: ''
+    password: '',
+    confirmar: ''
   });
 
-  const { email, password } = usuario;
+  const { nombre, email, password, confirmar } = usuario;
 
   const onChange = e => {
     setUsuario({
@@ -44,11 +46,22 @@ export const LoginPage = () => {
     
         <div className='form-usuario'>
           <div className='contenedor-form sombra-dark'>
-            <h1 className='text-dark h-propio'>Iniciar Sesión</h1>
+            <h1 className='text-dark h-propio'>Crear Cuenta</h1>
 
             <form className='form-s'
               onSubmit={onSubmit}
             >
+              <div className='campo-form'>
+                <label htmlFor="nombre">Nombre</label>
+                <input 
+                  type="text" 
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Nombre"
+                  value={nombre}
+                  onChange={onChange}
+                />
+              </div>
 
               <div className='campo-form'>
                 <label htmlFor="email">Email</label>
@@ -75,25 +88,29 @@ export const LoginPage = () => {
               </div>
 
               <div className='campo-form'>
-                <input type="submit" className='btn btn-primario btn-block' value="Iniciar Sesión"/>
+                <label htmlFor="confirmar">Confirmar Password</label>
+                <input 
+                  type="password"
+                  id="confirmar"
+                  name="confirmar"
+                  placeholder="Repetir Password"
+                  value={confirmar}
+                  onChange={onChange}
+                />
+              </div>
+
+              <div className='campo-form'>
+                <input type="submit" className='btn btn-primario btn-block' value="Register"/>
               </div>
 
             </form>
 
-            <Link to={'/create-account'} className="enlace-cuenta">
-              Crear Cuenta
+            <Link to={'/login'} className="enlace-cuenta">
+              Volver a Iniciar Sesión
             </Link>
             
           </div>
-          {/* <button
-          className='btn btn-primary'
-          onClick={ onLogin }
-          >
-            Login
-        </button> */}
-        </div>
 
-        
-    
+        </div>
   )
 }

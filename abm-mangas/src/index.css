@@ -8,6 +8,14 @@
   --Celeste: #5196ff;
   --Amarillo: #ffd90f;
   --Blanco: #f8efd6;
+
+  --blanco: #ffffff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000000;
+  --headingFont:'Raleway', sans-serif;
+  --textFont:  'Roboto', sans-serif;
 }
 
 /* COLORES */
@@ -17,7 +25,7 @@
 /* BLANCO: #f8efd6 */
 
 
-.back-celeste, html{
+.back-celeste{
   background-color: var(--Celeste);
   color: var(--Blanco);
 }
@@ -48,3 +56,4 @@ li{
 .colorBorde{
   border: red 2px solid;
 }
+

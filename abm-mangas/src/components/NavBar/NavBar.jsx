@@ -34,7 +34,10 @@ export const NavBar = () => {
 
         <ul id="listaNavBar" className="d-flex justify-content-center listaNavBar col-md-9 col-sm-12">
 
-
+            <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
+              href="/Vista-principal">
+              Home
+            </a>
 
             <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
               href="/Productos">
@@ -43,7 +46,7 @@ export const NavBar = () => {
 
 
             <a className="mr-5 ml-5 d-flex justify-content-center flex-column text-decoration-none"
-              href="/Search">
+              href="#">
               Ver Usuarios
             </a>
 
